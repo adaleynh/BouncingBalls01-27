@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f3e7ff, #c3d6ff);
+  overflow: hidden;
+}
+
+.ball-container {
+  position: relative;
+  height: 300px; /* Adjusted height to make the balls more centered */
+  width: 100%;
+  top: -50px; /* Shift container up slightly */
+}
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: bounce 2s infinite ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ball1 {
+  background: radial-gradient(circle, #ff8efb, #ff5bcf);
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.ball2 {
+  background: radial-gradient(circle, #9d94ff, #6f63ff);
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+.ball3 {
+  background: radial-gradient(circle, #6ae6ff, #3bbfff);
+  left: 80%;
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
